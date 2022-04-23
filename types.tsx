@@ -29,6 +29,20 @@ export type RootTabParamList = {
   TabTwo: undefined;
 };
 
+export type TabOneParamList = {
+  TabOneScreen: undefined;
+};
+
+export type TabTwoParamList = {
+  TabTwoScreen: undefined;
+};
+
+
+//defining names here to avoid typos
+export type MainTabParamList = {
+  Chats: undefined;
+  Contacts: undefined;
+};
 export type RootTabScreenProps<Screen extends keyof RootTabParamList> = CompositeScreenProps<
   BottomTabScreenProps<RootTabParamList, Screen>,
   NativeStackScreenProps<RootStackParamList>
